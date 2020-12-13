@@ -10,12 +10,14 @@ struct Launch: Decodable {
         let patch: Patch?
     }
     
+    let id: Int
     let name: String
     let date: String
     let success: Bool?
     let links: Links?
     
     enum CodingKeys: String, CodingKey {
+        case id = "flight_number"
         case date = "date_utc"
         case name
         case success
